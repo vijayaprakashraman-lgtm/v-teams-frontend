@@ -76,7 +76,7 @@ function Sidebar({
           </svg>
         </div>
         <div className="brand-text">
-          <span className="brand-title">V Chat</span>
+          <span className="brand-title">V-Teams</span>
           <span className="brand-subtitle">{user?.currentOrganization?.name || 'Team Workspace'}</span>
         </div>
 

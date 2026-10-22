@@ -11,7 +11,7 @@ function EmptyState({ onSelectTab }) {
         <div className="empty-state-icon">
           <ChatIcon size={44} color="#0284c7" strokeWidth={1.5} className="chat-empty-svg" />
         </div>
-        <h2 className="empty-state-title">Welcome to {org?.name || 'V Chat'}</h2>
+        <h2 className="empty-state-title">Welcome to {org?.name || 'V-Teams'}</h2>
         <p className="empty-state-text">
           Select a conversation from the sidebar or choose a channel to start collaborating with your team in real-time.
         </p>

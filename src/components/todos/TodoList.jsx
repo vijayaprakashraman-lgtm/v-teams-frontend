@@ -48,7 +48,7 @@ function TodoList({
             ? 'Try searching with different keywords or clearing your active filters.'
             : activeView === 'my'
             ? 'When tasks are assigned to you by teammates or created for yourself, they will appear here.'
-            : 'Organize team projects, track deliverables, and manage action items right inside V Chat.'}
+            : 'Organize team projects, track deliverables, and manage action items right inside V-Teams.'}
         </p>
         {!searchQuery && (
           <button

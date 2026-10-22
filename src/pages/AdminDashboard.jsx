@@ -49,7 +49,7 @@ function AdminDashboard({ onBackToWorkspace }) {
           <span className="forbidden-icon">🚫</span>
           <h2>Access Denied</h2>
           <p>
-            You do not have administrator permissions to access the V Chat Management Console.
+            You do not have administrator permissions to access the V-Teams Management Console.
           </p>
           <button
             type="button"

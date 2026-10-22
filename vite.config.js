@@ -9,17 +9,17 @@ export default defineConfig({
     host: true,
     proxy: {
       '/api': {
-        target: 'https://v-chat-production-aba4.up.railway.app',
+        target: 'https://v-teams.onrender.com',
         changeOrigin: true,
         secure: false,
       },
       '/uploads': {
-        target: 'https://v-chat-production-aba4.up.railway.app',
+        target: 'https://v-teams.onrender.com',
         changeOrigin: true,
         secure: false,
       },
       '/socket.io': {
-        target: 'https://v-chat-production-aba4.up.railway.app',
+        target: 'https://v-teams.onrender.com',
         ws: true,
         changeOrigin: true,
       },

@@ -53,7 +53,7 @@ function AdminHeader({ activeTab, user, onLogout, onBackToWorkspace, onToggleMob
           type="button"
           className="btn-action-small btn-secondary btn-switch-workspace"
           onClick={onBackToWorkspace}
-          title="Return to V Chat workspace"
+          title="Return to V-Teams workspace"
         >
           <ChatIcon size={14} style={{ marginRight: 6 }} /> Switch to Chat
         </button>
@@ -66,7 +66,7 @@ function AdminHeader({ activeTab, user, onLogout, onBackToWorkspace, onToggleMob
           type="button"
           className="btn-action-small btn-danger btn-admin-logout"
           onClick={onLogout}
-          title="Logout of V Chat"
+          title="Logout of V-Teams"
         >
           Logout
         </button>

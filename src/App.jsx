@@ -531,7 +531,7 @@ function MainApp() {
     return (
       <div className="auth-wrapper">
         <div className="main-card">
-          <h2 className="auth-title">Connecting to V-Chat...</h2>
+          <h2 className="auth-title">Connecting to V-Teams...</h2>
           <p className="auth-subtitle">Restoring your workspace session</p>
         </div>
       </div>

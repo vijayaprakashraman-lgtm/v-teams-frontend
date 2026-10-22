@@ -116,7 +116,7 @@ function AdminSidebar({ activeTab, onSelectTab, onBackToWorkspace, isMobileOpen 
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
             </svg>
           </span>
-          <span className="nav-label">Back to V Chat</span>
+          <span className="nav-label">Back to V-Teams</span>
         </button>
       </div>
     </aside>

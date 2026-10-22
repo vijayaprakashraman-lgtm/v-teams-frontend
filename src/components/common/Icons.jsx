@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * Centralized Icon Repository for Flock ChatApp
+ * Centralized Icon Repository for V-Teams
  * All application icons are defined here as clean, modern SVG components.
  */
 

@@ -102,7 +102,7 @@ function AcceptInvitationPage({
               Validating Invitation Link
             </h2>
             <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: 0 }}>
-              Connecting to V Chat to verify your invitation details...
+              Connecting to V-Teams to verify your invitation details...
             </p>
           </div>
         ) : error ? (
@@ -222,7 +222,7 @@ function AcceptInvitationPage({
                 Join {companyName}
               </h1>
               <p style={{ fontSize: '14px', color: 'var(--text-muted)', margin: 0 }}>
-                <strong>{inviterName}</strong> has invited you to join their team on V Chat.
+                <strong>{inviterName}</strong> has invited you to join their team on V-Teams.
               </p>
             </div>
 

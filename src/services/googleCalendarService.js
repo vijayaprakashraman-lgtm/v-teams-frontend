@@ -12,7 +12,7 @@ export const initiateGoogleCalendarConnect = () => {
   }
   const baseUrl = import.meta.env.VITE_API_URL
     ? import.meta.env.VITE_API_URL.replace("/api", "")
-    : "https://v-chat-production-aba4.up.railway.app";
+    : "https://v-teams.onrender.com";
   window.location.href = `${baseUrl}/api/google/auth?token=${encodeURIComponent(token)}`;
 };
 
