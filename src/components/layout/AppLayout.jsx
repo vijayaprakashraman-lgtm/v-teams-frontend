@@ -1003,6 +1003,37 @@ function AppLayout() {
       }
     };
 
+    
+    const handleMessagesDelivered = ({ conversationId, channelId, messageIds = [], userId, deliveredAt }) => {
+      if (!messageIds.length) return;
+      const updateDeliveredList = (list) => list.map((message) => (
+        messageIds.some((id) => id.toString() === (message._id || message.id)?.toString())
+          ? {
+            ...message,
+            isDelivered: true,
+            deliveredTo: [
+              ...(message.deliveredTo || []).filter((deliv) => (deliv.userId?._id || deliv.userId)?.toString() !== userId.toString()),
+              { userId, deliveredAt },
+            ],
+          }
+          : message
+      ));
+      if (conversationId) {
+        const id = conversationId.toString();
+        setMessagesMap((prev) => ({ ...prev, [id]: updateDeliveredList(prev[id] || []) }));
+      }
+      if (channelId) {
+        const id = channelId.toString();
+        setChannelMessagesMap((prev) => ({ ...prev, [id]: updateDeliveredList(prev[id] || []) }));
+      }
+    };
+
+    const handlePendingDelivery = ({ messageIds = [] }) => {
+      if (Array.isArray(messageIds) && messageIds.length > 0) {
+        socket.emit('message:ack_delivery', { messageIds });
+      }
+    };
+
     const handleMessagesRead = ({ conversationId, channelId, messageIds = [], userId, readAt }) => {
       if (!messageIds.length) return;
       const updateReadList = (list) => list.map((message) => (
@@ -1075,6 +1106,8 @@ function AppLayout() {
     socket.on('channel:message:deleted', handleMessageDeleted);
     socket.on('message:reaction:updated', handleReactionUpdated);
     socket.on('message:read', handleMessagesRead);
+    socket.on('message:delivered', handleMessagesDelivered);
+    socket.on('message:pending_delivery', handlePendingDelivery);
     socket.on('message:pinned', handlePinned);
     socket.on('message:unpinned', handleUnpinned);
     socket.on('message:poll_voted', handlePollVoted);
@@ -1099,6 +1132,8 @@ function AppLayout() {
       socket.off('channel:message:deleted', handleMessageDeleted);
       socket.off('message:reaction:updated', handleReactionUpdated);
       socket.off('message:read', handleMessagesRead);
+      socket.off('message:delivered', handleMessagesDelivered);
+      socket.off('message:pending_delivery', handlePendingDelivery);
       socket.off('message:pinned', handlePinned);
       socket.off('message:unpinned', handleUnpinned);
       socket.off('message:poll_voted', handlePollVoted);

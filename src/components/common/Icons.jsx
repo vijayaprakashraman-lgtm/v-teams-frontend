@@ -482,3 +482,41 @@ export const StopIcon = ({ size = 18, color = 'currentColor', strokeWidth = 2, c
     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
   </svg>
 );
+
+
+// 20A. SINGLE CHECK ICON (Sent ✓)
+export const SingleCheckIcon = ({ size = 15, color = 'currentColor', strokeWidth = 2.2, className, style }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    style={{ display: 'inline-block', verticalAlign: 'middle', ...style }}
+  >
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);
+
+// 20B. DOUBLE CHECK ICON (Delivered ✓✓ / Read ✓✓)
+export const DoubleCheckIcon = ({ size = 16, color = 'currentColor', strokeWidth = 2.2, className, style }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    style={{ display: 'inline-block', verticalAlign: 'middle', ...style }}
+  >
+    <path d="M18 6L9 17l-4-5" />
+    <path d="M22 10l-7.5 9-2.5-3" />
+  </svg>
+);

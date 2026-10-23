@@ -10937,3 +10937,35 @@
   }
 }
 
+
+.message-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.message-status-indicator .tick-icon {
+  display: inline-block;
+  transition: color 0.15s ease-in-out;
+}
+
+.message-status-indicator .tick-sent-grey,
+.message-status-indicator .tick-delivered-grey {
+  color: #94a3b8;
+}
+
+.message-status-indicator .tick-read-blue {
+  color: #38bdf8;
+}
+
+.dark-theme .message-status-indicator .tick-sent-grey,
+.dark-theme .message-status-indicator .tick-delivered-grey {
+  color: rgba(241, 245, 249, 0.75);
+}
+
+.dark-theme .message-status-indicator .tick-read-blue {
+  color: #38bdf8;
+}

@@ -92,7 +92,7 @@ function MessageInfoModal({ isOpen, onClose, message }) {
             <div className="msg-info-card">
               <span className="msg-info-label">Status</span>
               <span className="msg-info-value">
-                {message.isRead ? '✓✓ Read' : '✓ Delivered'}
+                {message.isRead ? '✓✓ Read' : (message.isDelivered ? '✓✓ Delivered' : '✓ Sent')}
               </span>
             </div>
           </div>

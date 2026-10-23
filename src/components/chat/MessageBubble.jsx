@@ -3,7 +3,7 @@ import Avatar from '../common/Avatar';
 import ReactionBar from './ReactionBar';
 import EmojiPicker from './EmojiPicker';
 import PollCard from './PollCard';
-import { TodoIcon, BookmarkIcon, PinIcon, AudioCallIcon, VideoCallIcon, BellIcon, CalendarIcon } from '../common/Icons';
+import { TodoIcon, BookmarkIcon, PinIcon, AudioCallIcon, VideoCallIcon, BellIcon, CalendarIcon, SingleCheckIcon, DoubleCheckIcon } from '../common/Icons';
 
 // Format message timestamp
 const formatMessageTime = (dateString) => {
