@@ -452,6 +452,7 @@ function ChannelWindow({
               <MessageList
                 messages={messages}
                 currentUserId={currentUserId}
+                conversationId={(channel._id || channel.id)?.toString()}
                 loading={loading}
                 highlightedMessageId={activeHighlightId}
                 replyingToId={(replyingTo?._id || replyingTo?.id)?.toString() || null}

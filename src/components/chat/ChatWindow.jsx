@@ -330,6 +330,7 @@ function ChatWindow({
       <MessageList
         messages={messages}
         currentUserId={currentUserId}
+        conversationId={convId}
         loading={loading}
         highlightedMessageId={activeHighlightId}
         replyingToId={(replyingTo?._id || replyingTo?.id)?.toString() || null}
